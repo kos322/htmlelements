@@ -4,7 +4,7 @@
 
     <groupId>ru.yandex.qatools.htmlelements</groupId>
     <artifactId>htmlelements</artifactId>
-    <version>1.14-SNAPSHOT</version>
+    <version>1.14.1.java6</version>
     <packaging>pom</packaging>
 
     <name>Yandex QATools HtmlElements</name>
@@ -59,8 +59,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.0</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
             <plugin>

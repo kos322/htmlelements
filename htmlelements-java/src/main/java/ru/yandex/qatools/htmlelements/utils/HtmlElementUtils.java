@@ -96,7 +96,13 @@ public final class HtmlElementUtils {
             return null;
         }
         Type genericType = field.getGenericType();
-        return (Class) ((ParameterizedType) genericType).getActualTypeArguments()[0];
+        /*
+        Fix problem. In Java 6 for List<long[]> we receive "java.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl cannot be cast to java.lang.Class"
+        refer http://stackoverflow.com/questions/11688312/classcastexception-when-upgrading-from-java6-to-java7-due-to-missing-genericarra
+         */
+
+        Type result = ((ParameterizedType) genericType).getActualTypeArguments()[0];
+        return result instanceof Class ? (Class) result : null;
     }
 
     private static boolean isParameterizedList(Field field) {

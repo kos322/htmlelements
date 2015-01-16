@@ -3,7 +3,7 @@
     <parent>
         <artifactId>htmlelements</artifactId>
         <groupId>ru.yandex.qatools.htmlelements</groupId>
-        <version>1.14-SNAPSHOT</version>
+        <version>1.14.1.java6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
