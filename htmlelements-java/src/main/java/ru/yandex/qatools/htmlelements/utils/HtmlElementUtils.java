@@ -102,7 +102,7 @@ public final class HtmlElementUtils {
          */
 
         Type result = ((ParameterizedType) genericType).getActualTypeArguments()[0];
-        return result instanceof Class ? (Class) result : null;
+        return result instanceof Class ? (Class) result : Object.class;
     }
 
     private static boolean isParameterizedList(Field field) {
